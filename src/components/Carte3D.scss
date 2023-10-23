@@ -1,0 +1,43 @@
+.container {
+  width: 200px;
+  height: 260px;
+  perspective: 600px;
+  margin: 40px 0px;
+  box-sizing: border-box;
+
+  .carte {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    background-color: rgb(21, 21, 21);
+  }
+
+  .card-is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .carta {
+    background-color: black;
+    border: 1px solid rgba(4, 254, 4, 0.804);
+    color: rgba(4, 254, 4, 0.804);
+    box-shadow: 2px 2px 4px rgb(46, 44, 44);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 260px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-image: url("https://img.freepik.com/vecteurs-libre/fond-numerique-code-binaire-style-matrice-nombres-baisse_1017-25336.jpg?w=900&t=st=1697378620~exp=1697379220~hmac=0e0834cb3ac5f17167f05c84198a1a98bd05a937e9f79ac0ead1f5fbc7f06b56");
+    background-size: cover;
+  }
+
+  .carte_back {
+    transform: rotateY(180deg);
+  }
+}

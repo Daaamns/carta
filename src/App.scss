@@ -1,0 +1,83 @@
+#root {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    height: 400px;
+    width: 500px;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border: #01fe01 solid 1px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 4px rgb(46, 44, 44);
+    background-image: url("https://img.freepik.com/vecteurs-libre/fond-numerique-code-binaire-style-matrice-nombres-baisse_1017-25336.jpg?w=900&t=st=1697378620~exp=1697379220~hmac=0e0834cb3ac5f17167f05c84198a1a98bd05a937e9f79ac0ead1f5fbc7f06b56");
+    background-size: cover;
+
+    .name {
+      position: relative;
+      font-size: 50px;
+      color: transparent;
+      /* text-shadow: 0 0 0.3vw rgb(48, 52, 52); */
+      text-transform: uppercase;
+      user-select: none;
+      /* background-color: black; */
+      height: 50px;
+    }
+
+    .name:before {
+      content: attr(title);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 50px;
+      color: #01fe01;
+      text-shadow: 0 0 0.3vw rgb(48, 52, 52);
+      border-right: 1px solid #01fe01;
+      overflow: hidden;
+      animation: animate 4s linear forwards;
+    }
+
+    @keyframes animate {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+        border-right-width: 0;
+      }
+    }
+
+    .text {
+      border-top: solid #01fe01 2px;
+      color: #01fe01;
+      padding: 30px;
+      padding-bottom: 0px;
+    }
+
+    .button {
+      background-color: black;
+      border: solid #01fe01 1px;
+      color: #01fe01;
+      align-self: flex-end;
+      margin-right: 30px;
+      box-shadow: 2px 2px 4px rgb(46, 44, 44);
+      /* justify-items: flex-end; */
+    }
+
+    .button:hover {
+      border: solid #d11469 1px;
+      box-shadow: 2px 2px 4px #d11469;
+      color: #d11469;
+    }
+  }
+}
